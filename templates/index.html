@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nissy Carolin's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+</head>
+
+<body>
+  <!-- Home Section -->
+  <section id="home" class="section fade-in">
+    <h1>Hi, I'm Nissy Carolin Pakalapati</h1>
+    <p>This is my page</p>
+    <img src="{{ url_for('static', filename='images/profile-pic.jpeg') }}" alt="Nissy Carolin Pakalapati" class="profile-pic">
+    <nav>
+      <button onclick="scrollToSection('about')">About Me</button>
+      <button onclick="scrollToSection('achievements')">Achievements</button>
+      <button onclick="scrollToSection('projects')">Projects</button>
+      <button onclick="scrollToSection('contact')">Contact Me</button>
+    </nav>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am a passionate developer with experience in building dynamic and responsive websites, Python applications, and data visualization projects.</p>
+    <p>I am seeking opportunities to create impactful digital solutions, enhance my skills, gain exposure to new technologies, and contribute to society.</p>
+    <p>Hobbies: Reading, cooking, coding, and solving puzzles. One of my favorite books is "Verity" by Colleen Hoover. In my free time, I enjoy puzzle solving and experimenting with sweet dishes more than spicy ones. I enjoy most genres of books, except biographies.</p>
+    <p>Interests: Web development, Python development, cloud architecture, and data analysis.</p>
+    
+    <h3>Education</h3>
+    <p><strong>Arizona State University</strong><br>
+    Masters in Information Technology (GPA: 4.00 / 4.00)<br>
+    Tempe, Arizona (Graduating May 2025)</p>
+
+    <p><strong>Jawaharlal Nehru Technological University</strong><br>
+    Masters in Computer Science And Engineering (GPA: 3.52 / 4.00)<br>
+    Hyderabad, India</p>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section">
+    <br><br><br><br><br><br>
+    <h2>Achievements</h2>
+
+      <p>Certified in Python for Data Science – Coursera</p>
+      <p>Web Development with JavaScript – FreeCodeCamp</p>
+      <p>Google Cloud Certified – Associate Cloud Engineer</p>
+      <p>Data Science Professional Certificate – IBM</p>
+      <p>Machine Learning Specialization – Stanford University</p> 
+
+  
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="{{ url_for('static', filename='images/profile-pic.jpeg') }}" alt="Nissy Carolin Pakalapati" class="profile-pic">
+      <a href="https://github.com/yourusername/project-one" target="_blank">Project One</a>
+      <p>Description for Project One.</p>
+    </div>
+    <div class="project">
+      <img src="{{ url_for('static', filename='images/profile-pic.jpeg') }}" alt="Nissy Carolin Pakalapati" class="profile-pic">
+      <a href="https://github.com/yourusername/project-two" target="_blank">Project Two</a>
+      <p>Description for Project Two.</p>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:nissycaroline7@gmail.com">nissycaroline7@gmail.com</a></p>
+      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/nissy-carolin-pakalapati" target="_blank">LinkedIn Profile</a></p>
+      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/nissysharon" target="_blank">GitHub Profile</a></p>
+  </div>
+  
+  </section>
+
+  <!-- Feedback Form -->
+  <section id="feedback" class="section fade-in">
+    <h2>Feedback</h2>
+    <form action="/submit_feedback" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+
+<br><br>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>Created by Nissy Carolin Pakalapati</p>
+    <p>&copy; 2025 All Rights Reserved</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

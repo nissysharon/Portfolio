@@ -1,0 +1,243 @@
+/* General Body */
+body {
+  text-align: center;
+  background-color: #FFF5E1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins'
+}
+h1, h2, h3 {
+  color: #008080; /* Teal */
+}
+
+/* Sections */
+.section {
+  height: calc(100vh - 40px);  /* Adjust height to fit window, leaving space for footer and feedback */
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 2px;
+  padding: 20px;
+  overflow: auto;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating animation for profile picture */
+.profile-pic {
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+/* Home Section (Profile Picture adjustment) */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile-pic {
+  border-radius: 10px;
+  height: 450px; /* Adjusted height to fit the window */
+  width: auto;   /* Maintain aspect ratio */
+  margin-bottom: 30px;
+}
+
+/* Buttons in Sections */
+.section button {
+  background-color: #ecf3f5;
+  border: 2px solid grey;
+  padding: 16px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.section button:hover {
+  background-color: rgb(9, 8, 8);
+  color: white;
+  border: 2px solid #120c0c;
+}
+#about{
+  font-size: 18px;
+  padding-block-start: 10%;
+}
+
+#achievements {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fdebd3, #cde9e6); 
+  font-family: 'Poppins', sans-serif; /* Match 'About Me' section */
+  text-align: center;
+  color: #333;
+  font-size:15px;
+}
+
+.ripple {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 165, 0, 0.5); /* Light orange ripple */
+  border-radius: 50%;
+  transform: scale(1);
+  animation: ripple-animation 1.2s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  0% {
+      transform: scale(10);
+      opacity: 0.2;
+  }
+  50% {
+      transform: scale(25);
+      opacity: 0.5;
+  }
+  
+}
+
+
+
+#about, #achievements {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Projects Section */
+#projects{
+  background: linear-gradient(135deg, #fdebd3, #cde9e6); 
+}
+#projects .project {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 10px;
+  text-align: center;
+  width: 200px;
+  display: inline-block;
+}
+
+#projects .project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#projects .project a {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+#projects .project a:hover {
+  color: #0073e6;
+}
+
+#projects .project p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Contact Me Section */
+#contact{
+  background: linear-gradient(135deg, #fdebd3, #cde9e6); 
+}
+
+
+#contact .contact-links {
+  width: 40%;  /* Adjust to 40% of the window */
+  margin: 0 auto;
+}
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-links p {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-links i {
+  font-size: 20px;
+  color: #ffcc00;
+}
+
+/* Feedback */
+#feedback form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#feedback input, #feedback textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#feedback button {
+  background-color: #ffcc00;
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+#feedback button:hover {
+  background-color: #ffaa00;
+}
+#feedback{
+  background: linear-gradient(135deg, #fdebd3, #cde9e6); 
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 16px 0;
+  width: 100%;
+  height: 20%;  /* Takes 20% of the window height */
+}
+
+footer p {
+  margin: 4px 0;
+}
